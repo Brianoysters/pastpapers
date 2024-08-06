@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscribe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="upload.html">Upload</a></li>
+                <li><a href="view_papers.php">View Past Papers</a></li>
+                <li><a href="subscribe.html">Subscribe</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Subscribe</h1>
+        <form action="subscribe.php" method="post">
+            <label for="plan">Choose a plan:</label>
+            <select id="plan" name="plan">
+                <option value="weekly">1 week - $1</option>
+                <option value="monthly">1 month - $5</option>
+            </select>
+            <label for="payment">Payment method:</label>
+            <select id="payment" name="payment">
+                <option value="mpesa">M-Pesa</option>
+                <option value="crypto">Crypto</option>
+                <option value="paypal">PayPal</option>
+            </select>
+            <input type="submit" value="Subscribe">
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Campus Past Papers</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Past Papers</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="upload.html">Upload</a></li>
+                <li><a href="view_papers.php">View Past Papers</a></li>
+                <li><a href="subscribe.html">Subscribe</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Upload Past Papers</h1>
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+            <label for="unit_name">Unit Name:</label>
+            <input type="text" id="unit_name" name="unit_name" required>
+                <!-- Dynamically populate units -->
+            </select>
+            <label for="file">Select file:</label>
+            <input type="file" id="file" name="file">
+            <input type="submit" value="Upload">
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Campus Past Papers</p>
+    </footer>
+</body>
+</html>
