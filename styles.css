@@ -1,3 +1,4 @@
+/* Base styles (already present) */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -20,6 +21,7 @@ header nav ul {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
 }
 
 header nav ul li {
@@ -52,85 +54,45 @@ h1 {
     color: #182848;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-form label {
-    margin: 10px 0 5px;
-    font-weight: bold;
-    color: #4b6cb7;
-}
-
-form input[type="text"],
-form input[type="password"],
-form input[type="file"],
-form select {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    transition: border 0.3s ease;
-}
-
-form input[type="text"]:focus,
-form input[type="password"]:focus,
-form input[type="file"]:focus,
-form select:focus {
-    border-color: #4b6cb7;
-}
-
-form input[type="submit"] {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background: #4b6cb7;
-    color: #fff;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background 0.3s ease;
-}
-
-form input[type="submit"]:hover {
-    background: #182848;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-}
-
-table, th, td {
-    border: 1px solid #ddd;
-}
-
-th, td {
-    padding: 12px;
-    text-align: left;
-}
-
-th {
-    background-color: #4b6cb7;
-    color: #fff;
-}
-
-tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-tr:hover {
-    background-color: #f1f1f1;
-}
-
 footer {
     text-align: center;
     padding: 10px 0;
     background: #182848;
     color: #fff;
-    position: fixed;
+    position: relative;
     width: 100%;
-    bottom: 0;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    main {
+        padding: 15px;
+        margin: 15px auto;
+    }
+
+    table, th, td {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    header nav ul li a {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    main {
+        padding: 10px;
+        margin: 10px auto;
+    }
+
+    table, th, td {
+        font-size: 12px;
+    }
 }
